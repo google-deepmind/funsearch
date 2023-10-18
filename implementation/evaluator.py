@@ -121,14 +121,14 @@ class Evaluator:
       template: code_manipulation.Program,
       function_to_evolve: str,
       function_to_run: str,
-      test_inputs: Sequence[Any],
+      inputs: Sequence[Any],
       timeout_seconds: int = 30,
   ):
     self._database = database
     self._template = template
     self._function_to_evolve = function_to_evolve
     self._function_to_run = function_to_run
-    self._test_inputs = test_inputs
+    self._inputs = inputs
     self._timeout_seconds = timeout_seconds
     self._sandbox = Sandbox()
 
@@ -143,13 +143,13 @@ class Evaluator:
         sample, version_generated, self._template, self._function_to_evolve)
 
     scores_per_test = {}
-    for test_input in self._test_inputs:
+    for current_input in self._inputs:
       test_output, runs_ok = self._sandbox.run(
-          program, self._function_to_run, test_input, self._timeout_seconds)
+          program, self._function_to_run, current_input, self._timeout_seconds)
       if (runs_ok and not _calls_ancestor(program, self._function_to_evolve)
           and test_output is not None):
         if not isinstance(test_output, (int, float)):
           raise ValueError('@function.run did not return an int/float score.')
-        scores_per_test[test_input] = test_output
+        scores_per_test[current_input] = test_output
     if scores_per_test:
       self._database.register_program(new_function, island_id, scores_per_test)
