@@ -1,25 +1,79 @@
-# funsearch
+# FunSearch
 
-TODO(b/298630276): Add a description for your new project, explain what is
-being released here, etc... Additional, the following sections are normally
-expected for all releases. Feel free to add additional sections if appropriate
-for your project.
+This repository accompanies the publication
+
+> Romera-Paredes, B. et al. Discovering new knowledge using Large Language
+Models by searching in the program space. *Nature* (2023)
+
+TODO(matejb): Insert hyperlink and update citation above.
+
+There are 6 independent directories:
+
+- `cap_set` contains functions discovered by FunSearch that construct large cap
+sets, and we also provide those cap sets in a numerical format for convenience.
+
+- `admissible_set` contains functions discovered by FunSearch that construct
+large admissible sets, and we also provide those admissible sets in a numerical
+format for convenience.
+
+- `bin_packing` contains heuristics discovered by FunSearch for online 1D bin
+packing problems, and an evaluation suite to reproduce the results reported in
+the paper.
+
+- `cyclic_graphs` contains functions discovered by FunSearch that construct
+large independent sets in strong products of cyclic graphs, and we also provide
+those sets in a numerical format for convenience.
+
+- `corner_free_sets` contains the discovered sets of indices, in numerical
+format, satisfying the combinatorial degeneration constraints described for the
+corners-free problem in the Supplementary Information.
+
+- `implementation` contains an implementation of the evolutionary algorithm,
+code manipulation routines, and a single-threaded implementation of the
+FunSearch pipeline. It does not contain language models for generating new
+programs, the sandbox for executing untrusted code, nor the infrastructure for
+running FunSearch on our distributed system. This directory is intended to be
+useful for understanding the details of our method, and for adapting it for use
+with any available language models, sandboxes, and distributed systems.
 
 ## Installation
 
-Write instructions for how the user should install your code. The instructions
-should ideally be valid when copy-pasted. You can combine this with the Usage
-section if there's no separate installation step.
+No installation is required. All notebooks can be opened and run in Google
+Colab.
 
 ## Usage
 
-Write example usage of your code. The instructions should ideally be valid when
-copy-pasted, and will be used by your technical reviewer to verify that your
-package functions correctly.
+- `cap_set`: The notebook `cap_set.ipynb` can be opened via
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/funsearch/blob/master/cap_set/cap_set.ipynb).
+
+- `admissible_set`: The notebook `symmetric_admissible_set.ipynb` can be opened
+via
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/funsearch/blob/master/admissible_set/symmetric_admissible_set.ipynb).
+
+- `bin_packing`: The notebook `bin_packing.ipynb` can be opened via
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/funsearch/blob/master/bin_packing/bin_packing.ipynb).
+
+- `cyclic_graphs`: The notebook `cyclic_graphs.ipynb` can be opened via
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/funsearch/blob/master/cyclic_graphs/cyclic_graphs.ipynb).
 
 ## Citing this work
 
-Add citation details here, usually a pastable BibTeX snippet.
+If you use the code or data in this package, please cite:
+
+```bibtex
+@Article{FunSearch2023,
+  author  = {Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and Balog, Matej and Kumar, M. Pawan and Dupont, Emilien and Ruiz, Francisco J. R. and Ellenberg, Jordan and Wang, Pengming and Fawzi, Omar and Kohli, Pushmeet and Fawzi, Alhussein},
+  journal = {Nature},
+  title   = {Discovering new knowledge using Large Language Models by searching in the program space},
+  year    = {2023},
+  volume  = {x},
+  number  = {x},
+  pages   = {x--x},
+  doi     = {10.1038/xxxx}
+}
+```
+
+TODO(matejb): Insert details into the citation once available.
 
 ## License and disclaimer
 
