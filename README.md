@@ -46,9 +46,9 @@ Colab.
 - `cap_set`: The notebook `cap_set.ipynb` can be opened via
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/funsearch/blob/master/cap_set/cap_set.ipynb).
 
-- `admissible_set`: The notebook `symmetric_admissible_set.ipynb` can be opened
+- `admissible_set`: The notebook `admissible_set.ipynb` can be opened
 via
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/funsearch/blob/master/admissible_set/symmetric_admissible_set.ipynb).
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/funsearch/blob/master/admissible_set/admissible_set.ipynb).
 
 - `bin_packing`: The notebook `bin_packing.ipynb` can be opened via
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/funsearch/blob/master/bin_packing/bin_packing.ipynb).
