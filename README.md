@@ -2,8 +2,7 @@
 
 This repository accompanies the publication
 
-> Romera-Paredes, B. et al. Discovering new knowledge using Large Language
-Models by searching in the program space. *Nature* (2023)
+> Romera-Paredes, B. et al. FunSearch: making new discoveries in mathematical sciences using Large Language Models. *Nature* (2023)
 
 TODO(matejb): Insert hyperlink and update citation above.
 
@@ -64,7 +63,7 @@ If you use the code or data in this package, please cite:
 @Article{FunSearch2023,
   author  = {Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and Balog, Matej and Kumar, M. Pawan and Dupont, Emilien and Ruiz, Francisco J. R. and Ellenberg, Jordan and Wang, Pengming and Fawzi, Omar and Kohli, Pushmeet and Fawzi, Alhussein},
   journal = {Nature},
-  title   = {Discovering new knowledge using Large Language Models by searching in the program space},
+  title   = {FunSearch: making new discoveries in mathematical sciences using Large Language Models},
   year    = {2023},
   volume  = {x},
   number  = {x},
